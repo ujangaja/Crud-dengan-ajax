@@ -7,3 +7,7 @@
 	-http://api.jquery.com/jquery.ajax/
 
 4.membuat file komentar_ajax.php
+
+5.menmpilkan data denganajax
+6.membuat proteksi dasar
+7.mengapus data dengan ajax

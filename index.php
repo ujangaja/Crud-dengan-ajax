@@ -12,6 +12,9 @@
 		body{
 			width: 80%; margin: 10% auto;
 		}
+		button{
+			background-color: red; color: white; border: none;
+		}
 	</style>
 </head>
 <body>
@@ -28,9 +31,11 @@
 			$query = "SELECT * FROM komentar";
 			$comments = mysqli_query($link, $query);
 
-			foreach ($comments as $coment) {?> 
+			foreach ($comments as $comment) {?> 
 				
-			<p><?=$coment['isi_komentar'];  ?></p>
+			<p id="komentar_<?=$comment['id'];  ?>"><?=$comment['isi_komentar'];  ?>
+				<button type="button" class="hapus_komentar" data-id="<?=$comment['id'];  ?>">Hapus</button>
+			</p>
 
 			<?php } ?>
 		 
