@@ -1,4 +1,9 @@
 //==== Membuat Crud Dengan Ajax==//
 
 
-1.membuat file database
+1.membuat file database.php
+2.membuat layout index.php
+3.menambahkan script ajax bisa dilihat pada link berikut:
+	-http://api.jquery.com/jquery.ajax/
+
+4.membuat file komentar_ajax.php
