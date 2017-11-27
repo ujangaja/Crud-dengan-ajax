@@ -3,6 +3,10 @@
 	// echo $_POST['isi_komentar']; ini untuk melihat di konsole
 include_once 'database.php';
 
+if(!isset($_SESSION['user'])){
+	die('0');
+}
+
 $komentar = mysqli_real_escape_string($link, $_POST['isi_komentar']);
 $query = "INSERT INTO komentar (isi_komentar, id_user) VALUES('$komentar', 1)";
 

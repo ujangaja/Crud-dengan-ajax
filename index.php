@@ -45,8 +45,11 @@
 			  url: "komentar_ajax.php",
 			  data: { isi_komentar: isi },
 			  success : function(data){
-			  	console.log(data);
-			  	$('#komentar_wrapper').prepend(data);
+			  	if(data== '0'){
+			  		alert("anda harus login!")
+			  	}else{
+			  		$('#komentar_wrapper').prepend(data);
+			  	}
 			  }
 			});
 		});
