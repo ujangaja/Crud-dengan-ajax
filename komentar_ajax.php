@@ -7,7 +7,7 @@ $komentar = mysqli_real_escape_string($link, $_POST['isi_komentar']);
 $query = "INSERT INTO komentar (isi_komentar, id_user) VALUES('$komentar', 1)";
 
 if(mysqli_query($link, $query)){
-	echo "true!";
+	echo "<p>".$komentar."</p>";
 }else{
 	echo "Error!";
 }

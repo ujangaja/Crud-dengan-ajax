@@ -46,7 +46,7 @@
 			  data: { isi_komentar: isi },
 			  success : function(data){
 			  	console.log(data);
-			  	$('#komentar_wrapper').prepend("<p>"+isi +"</p>");
+			  	$('#komentar_wrapper').prepend(data);
 			  }
 			});
 		});
