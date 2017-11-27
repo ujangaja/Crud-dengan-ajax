@@ -11,3 +11,4 @@
 5.menmpilkan data denganajax
 6.membuat proteksi dasar
 7.mengapus data dengan ajax
+	-membuat button dan script php hapus pada index.php
