@@ -22,7 +22,18 @@
 	<input type="submit" name="subit_komen" id="subit_komen" value="submit">
 
 	<div id="komentar_wrapper">
-		
+		<?php 
+
+			include_once 'database.php';
+			$query = "SELECT * FROM komentar";
+			$comments = mysqli_query($link, $query);
+
+			foreach ($comments as $coment) {?> 
+				
+			<p><?=$coment['isi_komentar'];  ?></p>
+
+			<?php } ?>
+		 
 	</div>
 
 	<script type="text/javascript">
@@ -35,6 +46,7 @@
 			  data: { isi_komentar: isi },
 			  success : function(data){
 			  	console.log(data);
+			  	$('#komentar_wrapper').prepend("<p>"+isi +"</p>");
 			  }
 			});
 		});
