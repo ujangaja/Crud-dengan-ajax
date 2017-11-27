@@ -25,6 +25,19 @@
 		
 	</div>
 
-
+	<script type="text/javascript">
+		
+		$('#subit_komen').on('click',function() {
+			var isi = $('#textarea_komen').val();
+			$.ajax({
+			  method: "POST",
+			  url: "komentar_ajax.php",
+			  data: { isi_komentar: isi },
+			  success : function(data){
+			  	console.log(data);
+			  }
+			});
+		});
+	</script>
 </body>
 </html>
